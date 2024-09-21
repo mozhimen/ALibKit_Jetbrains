@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.mozhimen.libk.jetbrains.kotlinx.serialization'
+    namespace 'com.mozhimen.libk.jetbrains.kotlinx.serialization.core'
     compileSdk 34
 
     defaultConfig {
@@ -32,7 +32,6 @@ android {
 
 dependencies {
     //kotlin
-    api 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2'
     api 'org.jetbrains.kotlinx:kotlinx-serialization-core:1.3.2'
 
     testImplementation 'junit:junit:4.13.2'

@@ -20,8 +20,9 @@ dependencyResolutionManagement {
 }
 rootProject.name = "ALibKit_Jetbrains"
 include ':app'
-include ':kotlinx_serialization'
+include ':kotlinx_serialization_core'
 include ':kotlinx_coroutines'
 include ':anko_common'
 include ':kotlinx_datetime'
 include ':kotlin_stdlib'
+include ':kotlinx_serialization_json'
