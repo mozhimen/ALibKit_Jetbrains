@@ -12,13 +12,23 @@ android {
         multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // 检查 R8 是否启用
+        def isR8Enabled = project.hasProperty('android.enableR8') ? project.getProperty('android.enableR8').toBoolean() : true
+        if (isR8Enabled) {
+            println "R8 is enabled. Using consumer-r8-rules.pro"
+            consumerProguardFiles 'consumer-r8-rules.pro'
+        } else {
+            println "R8 is disabled. Using consumer-proguard-rules.pro"
+            consumerProguardFiles 'consumer-rules.pro'
+        }
         consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
     compileOptions {
