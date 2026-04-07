@@ -2,6 +2,8 @@ dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         mavenLocal()
+        google()
+        mavenCentral()
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/jcenter' }
@@ -14,16 +16,14 @@ dependencyResolutionManagement {
         maven { url 'https://developer.huawei.com/repo/' }
         maven { url "https://jitpack.io" }
         maven { url 'https://www.jitpack.io' }
-        mavenCentral()
-        google()
     }
 }
 rootProject.name = "ALibKit_Jetbrains"
-include ':kotlinx_serialization_core'
-include ':kotlinx_coroutines'
-include ':anko_common'
-include ':kotlinx_datetime'
-include ':kotlin_stdlib'
-include ':kotlinx_serialization_json'
-include ':kotlin_stdlib_jdk8'
-include ':kotlin_stdlib_common'
+include ':kotlinx-serialization_core'
+include ':kotlinx-coroutines-bom'
+include ':anko-common'
+include ':kotlinx-datetime'
+include ':kotlin-stdlib'
+include ':kotlinx-serialization_json'
+include ':kotlin-stdlib_jdk8'
+include ':kotlin-stdlib_common'
